@@ -63,7 +63,8 @@ const LoginForm = (props) => {
                 </div>
                 <button type="submit" className="btn btn-primary btn-block">Submit</button>
             </form>
-
+            {username}
+            {password}
         </div>
     )
 }

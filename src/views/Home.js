@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useState} from "react";
+import React, {Component} from "react";
 import {Waktu,Search} from "../components";
 
 class Hompage extends Component{

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Home, LoginForm } from "./views";
+import { Home, LoginForm,StopWatch } from "./views";
 import Footer from "./components/Footer";
 const App =() => {
 
@@ -36,8 +36,8 @@ const App =() => {
                         </li>
 
                         <li className="nav-item">
-                            <Link className="nav-link" to="/kalkulator">
-                                Kalkulator
+                            <Link className="nav-link" to="/stopwatch">
+                                StopWatch
                             </Link>
                         </li>
                     </ul>
@@ -55,8 +55,8 @@ const App =() => {
                    <Route exact path="/login">
                        <LoginForm/>
                    </Route>
-                   <Route exact path="/kalkulator">
-                       ini adalah kalkulator
+                   <Route exact path="/stopwatch">
+                      <StopWatch/>
                    </Route>
                </Switch>
 
