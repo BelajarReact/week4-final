@@ -1,38 +1,210 @@
-.App {
+body {
+  font-family: Open Sans,sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  color: #4a4a4a;
+  background-color: #f7f7f7;
+  -webkit-font-smoothing: antialiased;
+}
+.App{
+  width: 100%;
+  margin: 0 auto;
+  min-height: 500px;
+}
+.navbar{
+  background: rgb(0, 174, 239);
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 11;
+}
+.container{
+  max-width: 480px;
+}
+.navbar a{
+  vertical-align: middle;
+}
+.navbar input{
+  width: auto;
+
+  margin-right: 10px;
+  flex: 0 0 auto;
+  flex-grow: 1;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  height: 36px;
+  background: rgb(27, 186, 245);
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  padding: 0px 15px;
+  border-radius: 20px;
+}
+.navbar input::placeholder{
+  color: rgba(255,255,255,0.6);
+}
+.headerButton{
+
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  height: 36px;
+  width: auto;
+  flex: 0 0 auto;
+  flex-grow: 1;
+
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  padding: 0px 15px;
+  border-radius: 20px;
+}
+
+.AppContainer{
+  background-color: white;
+  position: relative;
+
+  width: 100%;
+  box-sizing: border-box;
+  min-height: calc(100vh - 60px);
+  margin: 0px auto;
+  margin-top: 60px;
+  padding: 20px 16px 330px;
+}
+.btn,.form-control{
+  border-radius: 100px;
+}
+
+.heading{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Loader*/
+.search-loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/*Show and hide*/
+.show {
+  display:block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hide {
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/**
+REsults images
+ */
+.result-images.row{
+  margin: 30px 0;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.result-images.row > .kolom{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+.result-images .result-item {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  height: 200px;
+  overflow: hidden;
+  background-color: #ddd;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center center ;
+  background-attachment: inherit;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.result-images .result-item:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+.image-author{
+  position: absolute;
+  display: inline-flex;
+  padding: 3px 6px;
+  font-size: small;
+  background-color: red;
+  border-radius: 6px;
+  color:#fff;
+  right: 10px;
+  top:6px;
+  z-index: 2;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.image-author i{
+  margin-right: 6px;
+}
+.nav-link-container{
+  display: flex;
+}
+.nav-link-container.hide{
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
+.btn.disabled{
+  cursor: no-drop;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer{
+ position: absolute;
+  bottom:0;
+  text-align: center;
+  line-height: 1.5;
+  border-top: 1px solid #ddd;
+  padding: 20px 0 15px;
+
+}
+.footer p{
+  margin-bottom: 5px;
+}
+.footer .myLogo{
+  background-color: #111;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50px;
+}
+.footer .myLogo:hover{
+  background-color: #4a4a4a;
+  transform: scale(1.2);
+}
+.myLogo.white svg{
+  fill: #fff;
+}
+.social-media a{
+   display: inline-block;
+  padding: 10px;
 }
