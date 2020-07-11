@@ -1,6 +1,7 @@
 import React from 'react';
 
-export default ( props ) => {
+const PageNavigation = (props) =>{
+
     const {
         loading,
         showPrevLink,
@@ -37,3 +38,5 @@ export default ( props ) => {
         </div>
     )
 }
+
+export default PageNavigation;

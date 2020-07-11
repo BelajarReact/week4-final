@@ -6,16 +6,13 @@ class Hompage extends Component{
         super(props);
 
     }
-  componentDidMount() {
 
-  }
 
     render() {
         return (
 
             <div className="HomePage">
             <Waktu/>
-
             <Search/>
             </div>
         )

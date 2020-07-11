@@ -83,6 +83,12 @@ class Search extends React.Component {
             } )
     };
 
+
+    /**
+     * Handle on input change value,
+     * SetState query if query not empty
+     */
+
     handleInputPencarian = ( event ) => {
         const query = event.target.value;
         if ( ! query ) {
@@ -94,6 +100,8 @@ class Search extends React.Component {
         }
     };
 
+
+    //Handle page navigation if search result has more than limit per page
 
     handlePageClick = ( type ) => {
         // event.preventDefault();
@@ -117,10 +125,8 @@ class Search extends React.Component {
                     { results.map( result => {
                         return (
                             <div className="col-6 kolom" key={ result.id }>
-                            <a  href={ result.previewURL }  target="_blank" className="result-item" style={{backgroundImage:`url(${result.webformatURL})`,display:"block"}}>
+                            <a  href={ result.largeImageURL }  target="_blank" className="result-item" style={{backgroundImage:`url(${result.webformatURL})`,display:"block"}}>
                                 <span className="image-username image-author"><i className="fa fa-user-circle-o"  aria-hidden="true"></i>  {result.user}</span>
-
-
 
                             </a>
                             </div>
@@ -132,9 +138,6 @@ class Search extends React.Component {
         }
     };
 
-    componentDidMount() {
-
-    }
 
     componentWillUnmount() {
 
@@ -197,6 +200,7 @@ class Search extends React.Component {
                 />
 
                 <div  className={query ===''?'hide':'show'} style={{textAlign:"center",margin:"20px auto"}}>
+                   <p>Image by</p>
                     <img src={Pixabay} height="30"  alt="" />
                 </div>
 
@@ -205,4 +209,4 @@ class Search extends React.Component {
     }
 }
 
-export default Search
+export default Search;
