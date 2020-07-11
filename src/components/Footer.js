@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import {Link} from "react-router-dom"
 import Logo from "../logo.svg"
 
 class SocialMedia extends Component{
@@ -37,6 +37,21 @@ const Footer = () => {
             type: "youtube", icon: "fa-youtube-play", link: "https://www.youtube.com/user/dankerizer"
         }
     ]
+
+    const Pages  = [
+        {
+            link : "/",
+            title :'Home page'
+        },
+        {
+            link : "/about",
+            title :'About'
+        },
+        {
+            link : "/privacy",
+            title :'Privacy'
+        },
+    ]
     return (
         <footer className="footer">
             <a href="https://fb.me/hadie.danker" className="myLogo white" target="_blank"><img src={Logo} height="30px"
@@ -47,7 +62,9 @@ const Footer = () => {
             <p>Follo our social Media</p>
 
             <SocialMedia socials={socialMedias}/>
-
+            <ul className="nav justify-content-center">
+                {Pages.map((item,key) => <li className="nav-item" key={key}><Link className="nav-link" to={item.link} >{item.title}</Link></li>)}
+            </ul>
         </footer>
     )
 }

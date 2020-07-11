@@ -132,6 +132,17 @@ class Search extends React.Component {
         }
     };
 
+    componentDidMount() {
+
+    }
+
+    componentWillUnmount() {
+        this.cancel.cancel();
+        this.setState({
+            results:[]
+        })
+    }
+
     render() {
         const { query, loading, message, currentPageNo, totalPages } = this.state;
 
@@ -149,6 +160,7 @@ class Search extends React.Component {
                         name="query"
                         value={ query }
                         id="search-input"
+                        aria-label="search-input"
                         className="form-control"
                         placeholder="Search..."
                         onChange={this.handleInputPencarian}

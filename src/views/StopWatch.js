@@ -79,7 +79,7 @@ function StopWatch() {
                        <span>Seconds</span>
                    </div>
                    <div className={`multisecond time col ${centiseconds > 0 ? 'fill':''}`}>
-                       <span> {centiseconds}</span>
+                       <span data-testid="centiseconds"> {centiseconds}</span>
                        <span>timer</span>
                    </div>
                </div>

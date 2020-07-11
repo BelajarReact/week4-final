@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Home, LoginForm,StopWatch } from "./views";
+import { Home, LoginForm,StopWatch,About,Privacy } from "./views";
 import Footer from "./components/Footer";
 const App =() => {
 
@@ -57,6 +57,12 @@ const App =() => {
                    </Route>
                    <Route exact path="/stopwatch">
                       <StopWatch/>
+                   </Route>
+                   <Route exact path="/about">
+                       <About/>
+                   </Route>
+                   <Route exact path="/privacy">
+                       <Privacy/>
                    </Route>
                </Switch>
 

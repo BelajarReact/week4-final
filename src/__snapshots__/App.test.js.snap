@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Search Form Pixabay 1`] = `
+<div
+  className="container"
+>
+  <h2
+    className="heading"
+  >
+    Pencarian Gambar dari Pixabay
+  </h2>
+  <label
+    className="search-label"
+    htmlFor="search-input"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    <input
+      aria-label="search-input"
+      className="form-control"
+      id="search-input"
+      name="query"
+      onChange={[Function]}
+      placeholder="Search..."
+      type="text"
+      value=""
+    />
+  </label>
+  
+  <img
+    alt="loader"
+    className="search-loading hide"
+    src="loader.svg"
+  />
+  <div
+    className="nav-link-container btn-group btn-group-sm  hide"
+  >
+    <a
+      className=" btn btn-secondary 
+					disabled
+					"
+      href="#"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className=" btn btn-secondary
+					disabled
+					
+					"
+      href="#"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+  </div>
+  <div
+    className="nav-link-container btn-group btn-group-sm  hide"
+  >
+    <a
+      className=" btn btn-secondary 
+					disabled
+					"
+      href="#"
+      onClick={[Function]}
+    >
+      Prev
+    </a>
+    <a
+      className=" btn btn-secondary
+					disabled
+					
+					"
+      href="#"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+  </div>
+  <div
+    className="hide"
+    style={
+      Object {
+        "margin": "20px auto",
+        "textAlign": "center",
+      }
+    }
+  >
+    <img
+      alt=""
+      height="30"
+      src="pixabay.svg"
+    />
+  </div>
+</div>
+`;
