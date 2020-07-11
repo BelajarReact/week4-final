@@ -79,7 +79,7 @@ function StopWatch() {
                        <span>Seconds</span>
                    </div>
                    <div className={`multisecond time col ${centiseconds > 0 ? 'fill':''}`}>
-                       <span data-testid="centiseconds"> {centiseconds}</span>
+                       <span > {centiseconds}</span>
                        <span>timer</span>
                    </div>
                </div>
@@ -88,7 +88,7 @@ function StopWatch() {
             <br/>
                 <div className="d-flex justify-content-center btn-timer">
                     {timerOn === false && timerTime === 0 && (
-                        <button className={`btn`} title={`Start`} onClick={startTimer}><i className="fa fa-play" aria-hidden="true"></i></button>
+                        <button className={`btn`} title={`Start`} onClick={startTimer} data-testid="start-button"><i className="fa fa-play" aria-hidden="true"></i></button>
                     )}
                     {timerOn === true && (
                         <button className={`btn`} title={`Pause`} onClick={handleStop}><i className="fa fa-pause" aria-hidden="true"></i></button>

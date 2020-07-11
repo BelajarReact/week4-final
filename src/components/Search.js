@@ -137,7 +137,7 @@ class Search extends React.Component {
     }
 
     componentWillUnmount() {
-        this.cancel.cancel();
+
         this.setState({
             results:[]
         })
