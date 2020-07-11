@@ -5,9 +5,18 @@ const stopWatchInitialState = {
     timerTime: 0
 };
 
-export const stopWatchReducer = (state = stopWatchInitialState, action) => {
+ const stopwatch = (state = stopWatchInitialState, action) => {
 
     switch (action.type) {
+        case "RESET_TIMER":
+
+            return {
+                ...state,
+                timerOn: false,
+                timerTime: 0,
+                timerStart: Date.now() - state.timerTime,
+                timerId: action.timerId
+            };
         case 'START_TIMER':
             return {
                 ...state,
@@ -17,6 +26,7 @@ export const stopWatchReducer = (state = stopWatchInitialState, action) => {
                 timerId: action.timerId
             };
         case 'STOP_IT': {
+
             return {
                 ...state,
                 timerOn: false,
@@ -31,3 +41,4 @@ export const stopWatchReducer = (state = stopWatchInitialState, action) => {
     }
 }
 
+export default stopwatch;

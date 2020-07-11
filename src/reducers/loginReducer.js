@@ -8,7 +8,7 @@ const initialState = {
 };
 const SET_LOGIN_STATE = "SET_LOGIN_STATE"
 
-export const loginReducer = (state = initialState, action) => {
+ const loginReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_LOGIN_STATE:
             return {
@@ -20,3 +20,5 @@ export const loginReducer = (state = initialState, action) => {
             return state;
     }
 };
+
+export default loginReducer;

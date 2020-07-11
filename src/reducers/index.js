@@ -1,6 +1,5 @@
 import {combineReducers} from 'redux';
+import  loginReducer from './loginReducer'
+import  stopwatch from './stopwatchReducer'
 
-import  {loginReducer} from './loginReducer'
-import  {stopWatchReducer} from './stopwatchReducer'
-
-export default combineReducers({loginReducer:loginReducer,stopWatchReducer:stopWatchReducer});
+export default combineReducers({loginReducer,stopwatch});

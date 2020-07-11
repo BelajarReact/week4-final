@@ -208,3 +208,41 @@ REsults images
    display: inline-block;
   padding: 10px;
 }
+.stopwatch .time{
+  text-align: center;
+}
+.stopwatch .time span{
+  display: block;
+  font-weight: bold;
+}
+
+.time span:first-child{
+  font-size: 3rem;
+
+}
+.time span:last-child{
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.btn-timer .btn{
+  background-color: #4a4a4a;
+  color:#fff;
+  border-radius: 100%;
+  line-height: 1;
+  padding: 10px 12px;
+}
+
+.multisecond.fill{
+  color: red;
+}
+.hours.fill{
+  color: #1d4da7;
+}
+.minutes.fill{
+  color: #06106d;
+}
+
+.seconds.fill{
+  color: #3f4fde;
+}
